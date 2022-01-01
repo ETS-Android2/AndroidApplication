@@ -2,9 +2,7 @@ package com.example.user.navigationdrawersample;
 
 import android.app.Notification;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.annotation.NonNull;
-import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.NotificationCompat;
@@ -16,19 +14,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.MenuItem;
-import android.widget.CompoundButton;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import java.io.Console;
-
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity
+                         implements NotebooksFragment.OnButtonClickedListener,
+                                    OffersFragment.OnButtonClickedListenerOffer,
+                                    NavigationView.OnNavigationItemSelectedListener {
 
     private NotificationManagerCompat notificationManagerCompat;
 
+    private EditText name,message;
 
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
@@ -40,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        name = findViewById(R.id.name_field);
+        message = findViewById(R.id.message_field);
 
         notificationManagerCompat = NotificationManagerCompat.from(MainActivity.this);
 
@@ -76,12 +78,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    /**
-     * Creates an instance of the ActionBarDrawerToggle class:
-     * 1) Handles opening and closing the navigation drawer
-     * 2) Creates a hamburger icon in the toolbar
-     * 3) Attaches listener to open/close drawer on icon clicked and rotates the icon
-     */
     private void toggleDrawer() {
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -145,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_offers_id:
                 getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, new OffersFragment())
                         .commit();
-                // deSelectCheckedState();
+                 deSelectCheckedState();
                 closeDrawer();
                 break;
             case R.id.nav_emplyees_id:
@@ -172,7 +168,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(it);
                 closeDrawer();
                 break;
-
         }
         return true;
     }
@@ -195,5 +190,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         for (int i=0; i<noOfItems;i++){
             navigationView.getMenu().getItem(i).setChecked(false);
         }
+    }
+
+    @Override
+    public void onButtonClicked(View view) {
+        Intent ItShare = new Intent(Intent.ACTION_SEND);
+        ItShare.setType("text/plain");
+        String sharSub = "your subject here";
+        String sharBody = "Votre message a partager here !";
+        String DetailsMessage = "name : " +name + "\nMessage : "+message;
+        ItShare.putExtra(Intent.EXTRA_SUBJECT,sharSub);
+        ItShare.putExtra(Intent.EXTRA_TEXT,DetailsMessage);
+        startActivity(Intent.createChooser(ItShare,"Share using"));
+    }
+
+
+    @Override
+    public void onButtonClickedOffer(View view) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, new AddOfferFragment())
+                .commit();
+        deSelectCheckedState();
+        closeDrawer();
     }
 }
