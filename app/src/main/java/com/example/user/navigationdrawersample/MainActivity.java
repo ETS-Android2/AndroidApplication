@@ -1,5 +1,7 @@
 package com.example.user.navigationdrawersample;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.NavigationView;
@@ -35,7 +37,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         initializeViews();
         toggleDrawer();
         initializeDefaultFragment(savedInstanceState,0);
-        setDarkModeSwitchListener();
 
     }
 
@@ -50,7 +51,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         frameLayout = findViewById(R.id.framelayout_id);
         navigationView = findViewById(R.id.navigationview_id);
         navigationView.setNavigationItemSelectedListener(this);
-        darkModeSwitch = (SwitchCompat)navigationView.getMenu().findItem(R.id.nav_darkmode_id).getActionView();
     }
 
     /**
@@ -95,13 +95,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
-            case R.id.nav_message_id:
-                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, new MessageFragment())
-                        .commit();
-                closeDrawer();
-                break;
-            case R.id.nav_chat_id:
-                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, new ChatFragment())
+            case R.id.nav_dashboard_id:
+                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, new DashboardFragment())
                         .commit();
                 closeDrawer();
                 break;
@@ -115,43 +110,45 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         .commit();
                 closeDrawer();
                 break;
-            case R.id.nav_send_id:
-                Toast.makeText(this, "Send Pressed", Toast.LENGTH_SHORT).show();
+            case R.id.nav_message_id:
+                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, new MessageFragment())
+                        .commit();
+                closeDrawer();
                 break;
-            case R.id.nav_share_id:
-                Toast.makeText(this, "Share Pressed", Toast.LENGTH_SHORT).show();
+
+            case R.id.nav_offers_id:
+                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, new OffersFragment())
+                        .commit();
+                // deSelectCheckedState();
+                closeDrawer();
                 break;
-            case R.id.nav_photos_id:
-                Toast.makeText(this, "Photos Pressed", Toast.LENGTH_SHORT).show();
+            case R.id.nav_emplyees_id:
+                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, new EmployeesFragment())
+                        .commit();
+                closeDrawer();
                 break;
-            case R.id.nav_trash_id:
-                Toast.makeText(this, "Trash Pressed", Toast.LENGTH_SHORT).show();
+
+            case R.id.nav_Question_id:
+                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, new QuestionFragment())
+                        .commit();
+                deSelectCheckedState();
+                closeDrawer();
                 break;
+
             case R.id.nav_settings_id:
                 getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, new SettingsFragment())
                         .commit();
                 deSelectCheckedState();
                 closeDrawer();
                 break;
+            case R.id.nav_logout_id:
+                Intent it = new Intent(MainActivity.this,login_page.class);
+                startActivity(it);
+                closeDrawer();
+                break;
+
         }
         return true;
-    }
-
-    /**
-     * Attach setOnCheckedChangeListener to the dark mode switch
-     */
-    private void setDarkModeSwitchListener(){
-        darkModeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (!isChecked){
-                    Toast.makeText(MainActivity.this, "Dark Mode Turn Off", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    Toast.makeText(MainActivity.this, "Dark Mode Turn On", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
     }
 
     /**

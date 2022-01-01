@@ -9,17 +9,17 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/nav_header_circleimageview_id"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="112dp"
+        android:layout_height="98dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_launcher_background" />
+        android:src="@drawable/profil" />
 
     <TextView
         android:id="@+id/nav_header_name_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
-        android:text="My Name"
+        android:text="Maryam Mokded"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
         android:textSize="14sp"
         android:textColor="@android:color/black"/>
@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="4dp"
-        android:text="Email Address"
+        android:text="maryam@gmail.com"
         android:textColor="@android:color/darker_gray"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="14sp"
