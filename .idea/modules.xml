@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Android-NavigationDrawer.iml" filepath="$PROJECT_DIR$/.idea/Android-NavigationDrawer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Android-NavigationDrawer.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Android-NavigationDrawer.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidApplication.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidApplication.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidApplication.app.iml" />
     </modules>
   </component>
 </project>

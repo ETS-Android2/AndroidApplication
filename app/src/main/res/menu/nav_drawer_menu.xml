@@ -24,6 +24,14 @@
                 android:id="@+id/nav_message_id"
                 android:icon="@drawable/ic_email_black_24dp"
                 android:title="Mailbox" />
+            <item
+                android:id="@+id/nav_send_id"
+                android:icon="@drawable/ic_send_black_24dp"
+                android:title="SnackBar" />
+            <item
+                android:id="@+id/nav_notif_id"
+                android:icon="@drawable/ic_notifications"
+                android:title="Send Notification" />
         </menu>
     </item>
 
