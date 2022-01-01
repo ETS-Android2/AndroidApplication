@@ -7,28 +7,72 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Share Message"
-        android:textSize="30sp"
-        android:paddingTop="20dp"
-        android:paddingLeft="50dp"/>
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="50dp"/>
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_marginTop="150dp"
-        android:layout_marginLeft="40dp"
-        android:text="Name" />
-
-    <EditText
-        android:id="@+id/edit_text"
+    <android.support.design.widget.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/name"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:gravity="top"
-        android:inputType="text|textMultiLine" />
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="200dp">
+
+        <EditText
+            android:id="@+id/name_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:hint="Name"
+            android:inputType="textMultiLine"
+            android:overScrollMode="always"
+            android:padding="15dp"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/shipper_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="300dp">
+
+        <EditText
+            android:id="@+id/message_field"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="top"
+            android:hint="Your message here"
+            android:inputType="textMultiLine"
+            android:overScrollMode="always"
+            android:padding="15dp"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical" />
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Share" />
+
+    </android.support.design.widget.TextInputLayout>
+
 
 </RelativeLayout>

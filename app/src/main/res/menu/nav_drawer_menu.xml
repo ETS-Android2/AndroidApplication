@@ -14,8 +14,8 @@
             android:title="Profile" />
         <item
             android:id="@+id/nav_notebooks_id"
-            android:title="Notebooks"
-            android:icon="@drawable/ic_book_black_24dp"/>
+            android:title="Share"
+            android:icon="@drawable/ic_share_24"/>
     </group>
 
     <item android:title="Communicate">
