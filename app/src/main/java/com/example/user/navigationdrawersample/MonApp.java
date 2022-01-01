@@ -9,7 +9,7 @@ public class MonApp extends Application {
 
     public static final String exampleNotification ="Example Notification";
     @Override
-    public void onCreate() {
+    public void onCreate(){
         super.onCreate();
         createNotifcationExample();
     }
