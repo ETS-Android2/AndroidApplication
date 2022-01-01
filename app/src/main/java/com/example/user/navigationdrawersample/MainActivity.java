@@ -1,10 +1,14 @@
 package com.example.user.navigationdrawersample;
 
+import android.app.Notification;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -23,6 +27,9 @@ import java.io.Console;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private NotificationManagerCompat notificationManagerCompat;
+
+
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
     private FrameLayout frameLayout;
@@ -33,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        notificationManagerCompat = NotificationManagerCompat.from(MainActivity.this);
 
         initializeViews();
         toggleDrawer();
@@ -115,7 +124,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         .commit();
                 closeDrawer();
                 break;
-
+            case R.id.nav_send_id:
+                Snackbar snackbar = Snackbar
+                        .make(this.drawerLayout, "SnackBar successful!", Snackbar.LENGTH_LONG);
+                // Show
+                snackbar.show();
+                closeDrawer();
+                break;
+            case R.id.nav_notif_id:
+                Notification notification = new NotificationCompat.Builder(this,MonApp.exampleNotification)
+                        .setSmallIcon(R.drawable.ic_notifications)
+                        .setContentTitle("RMS")
+                        .setContentText("Your Body Notifications here")
+                        .setPriority(NotificationCompat.PRIORITY_HIGH)
+                        .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                        .build();
+                notificationManagerCompat.notify(1,notification);
+                closeDrawer();
+                break;
             case R.id.nav_offers_id:
                 getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, new OffersFragment())
                         .commit();
