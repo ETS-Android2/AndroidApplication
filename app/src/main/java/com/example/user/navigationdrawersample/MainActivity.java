@@ -18,7 +18,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
                          implements NotebooksFragment.OnButtonClickedListener,
@@ -136,7 +135,7 @@ public class MainActivity extends AppCompatActivity
                 closeDrawer();
                 break;
             case R.id.nav_offers_id:
-                Intent itOffer = new Intent(MainActivity.this,offer.class);
+                Intent itOffer = new Intent(MainActivity.this, offerActicity.class);
                 startActivity(itOffer);
                 closeDrawer();
                 break;

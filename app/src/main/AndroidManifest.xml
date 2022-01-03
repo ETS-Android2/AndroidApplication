@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.user.navigationdrawersample">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".MonApp"
         android:allowBackup="true"
@@ -11,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".offer"
+            android:name=".offerActicity"
             android:exported="false" />
         <activity
             android:name=".login_page"
