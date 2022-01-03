@@ -22,7 +22,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
                          implements NotebooksFragment.OnButtonClickedListener,
-                                    OffersFragment.OnButtonClickedListenerOffer,
                                     NavigationView.OnNavigationItemSelectedListener {
 
     private NotificationManagerCompat notificationManagerCompat;
@@ -137,9 +136,8 @@ public class MainActivity extends AppCompatActivity
                 closeDrawer();
                 break;
             case R.id.nav_offers_id:
-                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, new OffersFragment())
-                        .commit();
-                 deSelectCheckedState();
+                Intent itOffer = new Intent(MainActivity.this,offer.class);
+                startActivity(itOffer);
                 closeDrawer();
                 break;
             case R.id.nav_emplyees_id:
@@ -162,8 +160,8 @@ public class MainActivity extends AppCompatActivity
                 closeDrawer();
                 break;
             case R.id.nav_logout_id:
-                Intent it = new Intent(MainActivity.this,login_page.class);
-                startActivity(it);
+                Intent itLogin = new Intent(MainActivity.this,login_page.class);
+                startActivity(itLogin);
                 closeDrawer();
                 break;
         }
@@ -202,11 +200,4 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    @Override
-    public void onButtonClickedOffer(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, new AddOfferFragment())
-                .commit();
-        deSelectCheckedState();
-        closeDrawer();
-    }
 }
