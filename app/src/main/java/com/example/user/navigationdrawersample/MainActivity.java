@@ -40,8 +40,6 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        name = findViewById(R.id.name_field);
-        message = findViewById(R.id.message_field);
 
         notificationManagerCompat = NotificationManagerCompat.from(MainActivity.this);
 
@@ -197,8 +195,7 @@ public class MainActivity extends AppCompatActivity
         Intent ItShare = new Intent(Intent.ACTION_SEND);
         ItShare.setType("text/plain");
         String sharSub = "your subject here";
-        String sharBody = "Votre message a partager here !";
-        String DetailsMessage = "name : " +name + "\nMessage : "+message;
+        String DetailsMessage = "This subject must be shared from the application of the recruitment managment system";
         ItShare.putExtra(Intent.EXTRA_SUBJECT,sharSub);
         ItShare.putExtra(Intent.EXTRA_TEXT,DetailsMessage);
         startActivity(Intent.createChooser(ItShare,"Share using"));

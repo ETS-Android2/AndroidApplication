@@ -15,8 +15,6 @@ import android.widget.EditText;
 public class NotebooksFragment extends Fragment {
 
     private Button btnShare;
-    private EditText name, message;
-
     private OnButtonClickedListener mcallBack;
 
 
@@ -29,10 +27,6 @@ public class NotebooksFragment extends Fragment {
 
         btnShare = rootView.findViewById(R.id.btnShare);
 
-        name = rootView.findViewById(R.id.name_field);
-        message = rootView.findViewById(R.id.message_field);
-
-        final String DetailsSahred = "name : " + name + " Message : " + message;
 
         btnShare.setOnClickListener(new View.OnClickListener() {
             @Override
