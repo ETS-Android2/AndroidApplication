@@ -8,4 +8,5 @@
     <color name="black">#131313</color>
     <color name="gradient_start_color">#EA97F8</color>
     <color name="gradient_end_color">#EF8F70</color>
+    <color name="grey">#BCBABD</color>
 </resources>
