@@ -56,9 +56,9 @@
     <item android:title="Others">
         <menu android:checkableBehavior="single">
             <item
-                android:id="@+id/nav_settings_id"
-                android:title="Settings"
-                android:icon="@drawable/ic_settings_black_24dp"/>
+                android:id="@+id/nav_geolocalisation_id"
+                android:title="Geolocalisation"
+                android:icon="@drawable/ic_geolocalisation"/>
             <item
                 android:id="@+id/nav_logout_id"
                 android:title="Logout"

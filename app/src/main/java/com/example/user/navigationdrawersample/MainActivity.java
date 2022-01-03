@@ -18,7 +18,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
                          implements NotebooksFragment.OnButtonClickedListener,
@@ -153,10 +152,9 @@ public class MainActivity extends AppCompatActivity
                 closeDrawer();
                 break;
 
-            case R.id.nav_settings_id:
-                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_id, new SettingsFragment())
-                        .commit();
-                deSelectCheckedState();
+            case R.id.nav_geolocalisation_id:
+                Intent itGeolocalisation = new Intent(MainActivity.this,Geolocalisation.class);
+                startActivity(itGeolocalisation);
                 closeDrawer();
                 break;
             case R.id.nav_logout_id:
