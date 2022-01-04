@@ -57,7 +57,7 @@
         <menu android:checkableBehavior="single">
             <item
                 android:id="@+id/nav_settings_id"
-                android:title="Settings"
+                android:title="FeedBack"
                 android:icon="@drawable/ic_settings_black_24dp"/>
             <item
                 android:id="@+id/nav_logout_id"
