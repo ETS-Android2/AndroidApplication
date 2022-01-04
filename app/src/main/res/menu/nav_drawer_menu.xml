@@ -32,6 +32,12 @@
                 android:id="@+id/nav_notif_id"
                 android:icon="@drawable/ic_notifications"
                 android:title="Send Notification" />
+
+            <item
+                android:id="@+id/nav_geolocalisation_id"
+                android:title="Geolocalisation"
+                android:icon="@drawable/ic_geolocalisation"/>
+
         </menu>
     </item>
 
