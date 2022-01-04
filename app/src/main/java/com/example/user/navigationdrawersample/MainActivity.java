@@ -123,6 +123,9 @@ public class MainActivity extends AppCompatActivity
                 // Show
                 snackbar.show();
                 closeDrawer();
+            case R.id.nav_geolocalisation_id:
+                Intent itGeolocalisation = new Intent(MainActivity.this,Geolocalisation.class);
+                startActivity(itGeolocalisation);
                 break;
             case R.id.nav_notif_id:
                 Notification notification = new NotificationCompat.Builder(this,MonApp.exampleNotification)
