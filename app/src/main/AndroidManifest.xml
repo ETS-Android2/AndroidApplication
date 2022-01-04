@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".detailsOffer"
+            android:exported="false" />
+        <activity
+            android:name=".AddOfferActivity"
+            android:exported="false" />
+        <activity
             android:name=".offerActicity"
             android:exported="false" />
         <activity

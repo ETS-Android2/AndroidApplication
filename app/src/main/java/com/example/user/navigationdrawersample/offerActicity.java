@@ -1,9 +1,12 @@
 package com.example.user.navigationdrawersample;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -23,6 +26,7 @@ public class offerActicity extends AppCompatActivity {
 
     private static final String URL_DATA  ="https://test-deploiment.herokuapp.com/offers";
 
+    Button btnAdd,btnCheckout;
     ArrayList<Offer> listOffer;
     RecyclerView myRecycle ;
 
@@ -31,27 +35,34 @@ public class offerActicity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offer);
 
+
         myRecycle =findViewById(R.id.myRecycle);
 
         listOffer = new ArrayList<>();
-/*
-        listOffer.add(new Offer(1,15,"Date1","Offer1"));
-        listOffer.add(new Offer(2,10,"Date2","Offer2"));
-        listOffer.add(new Offer(3,20,"Date3","Offer3"));
-        listOffer.add(new Offer(4,21,"Date4","Offer4"));
-        listOffer.add(new Offer(5,30,"Date5","Offer5"));
-        listOffer.add(new Offer(6,70,"Date6","Offer6"));
-
-        myRecycle.setHasFixedSize(true);
-        myRecycle.setLayoutManager(new LinearLayoutManager(offerActicity.this));
-        myRecycle.setAdapter(new MyOfferAdapter(listOffer,offerActicity.this));
-  */
 
         getListOffers();
 
+        btnCheckout = findViewById(R.id.btnCheckout);
+        btnAdd = findViewById(R.id.btnAdd);
 
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent itAddOfferPage = new Intent(offerActicity.this,AddOfferActivity.class);
+                startActivity(itAddOfferPage);
+            }
+        });
+
+        btnCheckout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent itDashboardPage = new Intent(offerActicity.this,MainActivity.class);
+                startActivity(itDashboardPage);
+            }
+        });
     }
 
+   //get All data
     private void getListOffers() {
         StringRequest stringRequest = new
                 StringRequest(Request.Method.GET,
