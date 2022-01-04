@@ -263,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641239212904</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Nour_Add_Settings">
+      <created>1641256144562</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1641256144562</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,6 +290,7 @@
     <MESSAGE value="Maryam_Add_Notification_Snackbar" />
     <MESSAGE value="Maryam_Add_Profil" />
     <MESSAGE value="Nour_LoginPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nour_LoginPage" />
+    <MESSAGE value="Nour_Add_Settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nour_Add_Settings" />
   </component>
 </project>
