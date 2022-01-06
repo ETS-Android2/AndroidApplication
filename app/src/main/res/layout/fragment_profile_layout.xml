@@ -52,7 +52,7 @@
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"
         android:layout_marginBottom="376dp"
-        android:text="Flutter Software Engineer"
+        android:text="Android Software Engineer"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.191"

@@ -29,12 +29,24 @@
         <entry key="..\:/Users/Mariem/Desktop/Android/AndroidApplication/app/src/main/res/layout/nav_header_layout.xml" value="0.121875" />
         <entry key="..\:/Users/Mariem/Desktop/Android/AndroidApplication/app/src/main/res/layout/offer_item.xml" value="0.33" />
         <entry key="..\:/Users/Mariem/Desktop/Android/AndroidApplication/app/src/main/res/menu/nav_drawer_menu.xml" value="0.121875" />
+        <entry key="..\:/Users/Mariem/Desktop/AndroidVersionFinal/AndroidApplicationV1/app/src/main/res/layout/activity_add_offer.xml" value="0.11927083333333334" />
+        <entry key="..\:/Users/Mariem/Desktop/AndroidVersionFinal/AndroidApplicationV1/app/src/main/res/layout/activity_offer.xml" value="0.11875" />
+        <entry key="..\:/Users/Mariem/Desktop/AndroidVersionFinal/AndroidApplicationV1/app/src/main/res/menu/nav_drawer_menu.xml" value="0.11927083333333334" />
         <entry key="..\:/Users/Mariem/Desktop/ProjetAndroid/AndroidApplication/app/src/main/res/layout/activity_add_offer.xml" value="0.13177083333333334" />
         <entry key="..\:/Users/Mariem/Desktop/ProjetAndroid/AndroidApplication/app/src/main/res/layout/fragment_add_offer.xml" value="0.13177083333333334" />
         <entry key="..\:/Users/Mariem/Desktop/ProjetAndroid/AndroidApplication/app/src/main/res/layout/fragment_message_layout.xml" value="0.13177083333333334" />
         <entry key="..\:/Users/Mariem/Desktop/ProjetAndroid/AndroidApplication/app/src/main/res/layout/fragment_notebooks_layout.xml" value="0.182518115942029" />
         <entry key="..\:/Users/Mariem/Desktop/ProjetAndroid/AndroidApplication/app/src/main/res/layout/fragment_offers_layout.xml" value="0.13177083333333334" />
         <entry key="..\:/Users/Mariem/Desktop/ProjetAndroid/AndroidApplication/app/src/main/res/menu/nav_drawer_menu.xml" value="0.13177083333333334" />
+        <entry key="..\:/Users/hanin/Desktop/android_studio_projects/AndroidApplicationV1/app/src/main/res/layout/activity_geolocalisation.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/hanin/Desktop/android_studio_projects/AndroidApplicationV1/app/src/main/res/layout/activity_login_page.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hanin/Desktop/android_studio_projects/AndroidApplicationV1/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hanin/Desktop/android_studio_projects/AndroidApplicationV1/app/src/main/res/layout/fragment_add_offer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hanin/Desktop/android_studio_projects/AndroidApplicationV1/app/src/main/res/layout/fragment_dashboard_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hanin/Desktop/android_studio_projects/AndroidApplicationV1/app/src/main/res/layout/fragment_profile_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hanin/Desktop/android_studio_projects/AndroidApplicationV1/app/src/main/res/layout/fragment_settings_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hanin/Desktop/android_studio_projects/AndroidApplicationV1/app/src/main/res/layout/nav_drawer_darkmode_switch.xml" value="0.10416666666666667" />
+        <entry key="..\:/Users/hanin/Desktop/android_studio_projects/AndroidApplicationV1/app/src/main/res/menu/nav_drawer_menu.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

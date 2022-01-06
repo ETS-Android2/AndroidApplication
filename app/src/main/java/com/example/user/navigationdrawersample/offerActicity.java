@@ -1,9 +1,12 @@
 package com.example.user.navigationdrawersample;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -22,6 +25,9 @@ import java.util.ArrayList;
 public class offerActicity extends AppCompatActivity {
 
     private static final String URL_DATA  ="https://test-deploiment.herokuapp.com/offers";
+
+
+    Button btnCheckout,btnAdd;
 
     ArrayList<Offer> listOffer;
     RecyclerView myRecycle ;
@@ -48,7 +54,24 @@ public class offerActicity extends AppCompatActivity {
   */
 
         getListOffers();
+        btnCheckout = findViewById(R.id.btnCheckout);
+        btnAdd = findViewById(R.id.btnAdd);
 
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent itAddOfferPage = new Intent(offerActicity.this,AddOffer.class);
+                startActivity(itAddOfferPage);
+            }
+        });
+
+        btnCheckout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent itDashboardPage = new Intent(offerActicity.this,MainActivity.class);
+                startActivity(itDashboardPage);
+            }
+        });
 
     }
 
